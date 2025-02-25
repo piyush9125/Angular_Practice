@@ -7,4 +7,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'AGPractice';
+  hh='piyush';
+
+  students=[{name:'',age:''}];
+  
+  add(std:any){
+    
+    console.log(std)
+    
+  
+  }
+
+
 }

@@ -1,1 +1,9 @@
-<h1>hii...</h1>
+
+<form *ngFor="let std of students">
+username: <input type="text" name="name" [(ngModel)]="std.name"/>
+<br><br>
+<input type="text" name="age" [(ngModel)]="std.age"/>
+<button (click)="add(std)">add</button>
+
+
+<h3>{{hh}}</h3>
