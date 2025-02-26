@@ -1,9 +1,18 @@
-
-<form *ngFor="let std of students">
-username: <input type="text" name="name" [(ngModel)]="std.name"/>
-<br><br>
-<input type="text" name="age" [(ngModel)]="std.age"/>
-<button (click)="add(std)">add</button>
-
-
-<h3>{{hh}}</h3>
+<table border="1px">
+    <thead>
+        <tr>
+            <th>name</th>
+            <th>age</th>
+            <th>action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let std of student">
+            <td *ngIf="!std.isEdit==true">{{std.name}}</td>
+            <td *ngIf="!std.isEdit==false"><input type="text" [(ngModel)]="std.name"></td>
+            <td *ngIf="!std.isEdit==true">{{std.age}}</td>
+            <td *ngIf="!std.isEdit==false"><input type="text" [(ngModel)]="std.age"></td>
+            <td><button (click)="changed(std)">{{std.buttoname}}</button></td>
+        </tr>
+    </tbody>
+</table>
